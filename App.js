@@ -35,7 +35,7 @@ export default class App extends Component {
     };
   }
 
-  getAttributes() {
+  getAttributes = () => {
     args = [];
     this.state.data.map((value, index) => {
       args.push({
@@ -45,7 +45,7 @@ export default class App extends Component {
       });
     });
     return args;
-  }
+  };
 
   render() {
     return (
@@ -84,7 +84,7 @@ export default class App extends Component {
           <View style={styles.buttonWrap}>
             <TouchableOpacity
               onPress={() => {
-                this.props.onPress(this.getAttributes.bind(this));
+                this.props.onPress(this.getAttributes);
               }}
               style={styles.button}
             >
