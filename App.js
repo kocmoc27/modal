@@ -1,13 +1,16 @@
 import React, { Component } from "react";
 import {
+  Modal,
   Platform,
   StyleSheet,
   ScrollView,
   Text,
   TouchableOpacity,
-  View
+  View,
+  Picker,
+  Switch,
+  TouchableHighlight
 } from "react-native";
-import { Button } from "./src";
 import propTypes from "prop-types";
 /* 
 1. написать callback
@@ -108,10 +111,10 @@ const styles = {
   },
   container: {
     flex: 1,
-    justifyContent: "center",
+    justifyContent: "space-between",
     alignItem: "center",
     borderStyle: "solid",
-    borderColor: "yellow",
+    borderColor: "#eeb240",
     borderWidth: 3,
     borderRadius: 8
   },
@@ -148,13 +151,13 @@ const styles = {
     height: 18,
     padding: 2,
     borderStyle: "solid",
-    borderColor: "yellow",
+    borderColor: "#eeb240",
     borderWidth: 2
   },
   chBoxFill: {
     width: 9,
     height: 9,
-    backgroundColor: "yellow"
+    backgroundColor: "#eeb240"
   },
   chBoxTextBlock: { marginLeft: 15 },
   chBoxText: {
@@ -172,7 +175,7 @@ const styles = {
   button: {
     padding: 15,
     borderStyle: "solid",
-    borderColor: "yellow",
+    borderColor: "#eeb240",
     borderWidth: 1,
     borderRadius: 5,
     textAlign: "center"
